@@ -86,7 +86,7 @@ jobs:
         run: |
           eb init -p python-3.11 flask-on-aws-eb --region ap-southeast-3
       # Deploy to (or Create) the Elastic Beanstalk environment
-      - name: Create test environment & deploy
+      - name: Create environment & deploy
         run: |
-          (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment
+          (eb use alpha-test-env && eb status alpha-test-env && eb deploy) || eb create alpha-test-env
     
