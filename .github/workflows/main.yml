@@ -82,11 +82,11 @@ jobs:
           aws-region: ap-southeast-3
 
       # Create the Elastic Beanstalk application
-      - name: Create EBS application
-        run: |
-          eb init -p python-3.11 flask-on-aws-eb --region ap-southeast-3
+      # - name: Create EBS application
+      #   run: |
+      #     eb init -p python-3.11 flask-on-aws-eb --region ap-southeast-3
       # Deploy to (or Create) the Elastic Beanstalk environment
-      - name: Create environment & deploy
-        run: |
-          (eb use alpha-test-env && eb status alpha-test-env && eb deploy) || eb create alpha-test-env
+      # - name: Create environment & deploy
+      #   run: |
+      #     (eb use alpha-test-env && eb status alpha-test-env && eb deploy) || eb create alpha-test-env
     
